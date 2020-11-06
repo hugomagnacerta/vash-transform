@@ -1,0 +1,30 @@
+{
+  "name": "vash-transform",
+  "version": "1.0.0",
+  "description": "Project to explore Vash template engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugomagnacerta/vash-transform.git"
+  },
+  "keywords": [
+    "vash",
+    "render",
+    "json",
+    "transform",
+    "template",
+    "engine"
+  ],
+  "author": "Hugo Gonzalez <hugo@magnacerta.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hugomagnacerta/vash-transform/issues"
+  },
+  "homepage": "https://github.com/hugomagnacerta/vash-transform#readme",
+  "dependencies": {
+    "vash": "^0.13.0"
+  }
+}

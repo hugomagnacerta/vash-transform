@@ -1,0 +1,16 @@
+{
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+      "https://schema.opencerta.org/fhir/202009"
+    ],
+    "type": [
+      "VerifiableCredential",
+      "FHIRCredential"
+    ],
+    "id": "2383293928932",
+    "issuer": "TEST_OPENCERTA",
+    "issuanceDate": "2020-11-06T04:13:08.681Z",
+    "expirationDate": "2020-11-06T04:13:08.681Z"
+    
+}
+  
