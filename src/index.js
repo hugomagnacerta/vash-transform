@@ -16,7 +16,6 @@ vash.helpers.toDate = date => {
 
 vash.helpers.toJsonString = string => {
     if ( !string ) return 'N/A';
-    console.log(vash)
     //process string data
     return string;
 } 
