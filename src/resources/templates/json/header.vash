@@ -1,0 +1,8 @@
+"@@context": [
+  "https://www.w3.org/2018/credentials/v1",
+  "https://schema.opencerta.org/fhir/202009"
+],
+"type": [
+  "VerifiableCredential",
+  "FHIRCredential"
+]

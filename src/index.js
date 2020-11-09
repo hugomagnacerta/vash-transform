@@ -6,12 +6,46 @@ const vash = require('vash');
 /* internal modules */
 const jsonData = require('./resources/json/data.json');
 
-const fileName = join(__dirname,'resources', 'templates', 'basic.vash');
-const source = fs.readFileSync(fileName, 'utf8');
+vash.helpers.toDate = date => {
+    if ( !date ) return 'N/A';
 
-var tpl = vash.compile(source);
+    let dateWithFormat = new Date(date);
 
-var out = tpl(jsonData);
+    return dateWithFormat.toISOString();
+}
+
+vash.helpers.toJsonString = string => {
+    if ( !string ) return 'N/A';
+    console.log(vash)
+    //process string data
+    return string;
+} 
+
+//Reading Credentials Template
+const credentialsFileName = join(__dirname,'resources', 'templates', 'json', 'credentials.vash');
+const credentialsSource = fs.readFileSync(credentialsFileName, 'utf8');
+
+//Executing template engine for credentials 
+const credentialsTemplate = vash.compile(credentialsSource,  {
+    //useWith: true,
+    helpersName: 'json'
+});
+
+let credentialsJsonOut = credentialsTemplate(jsonData.subject);
+
+jsonData.credentialSubject = credentialsJsonOut;
+
+const mainFileName = join(__dirname,'resources', 'templates', 'json', 'main.vash');
+const mainSource = fs.readFileSync(mainFileName, 'utf8');
+
+const mainTemplate = vash.compile(mainSource,  {
+    //useWith: true,
+    helpersName: 'json'
+});
+
+let out = mainTemplate(jsonData);
+
+out = out.split('&quot;').join('"');
 
 console.log(out);
 

@@ -1,0 +1,5 @@
+@html.extend('./resources/templates/html/layout.vash', function(model){
+	@html.append('main-nav', function(){
+		<li><a href="/another">Another Link</a></li>
+	})
+})

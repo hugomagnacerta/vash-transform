@@ -1,0 +1,9 @@
+{
+    @json.include('./resources/templates/json/header.vash'),
+    "id": "@model.credential_id",
+    "issuer": "@model.issuer_ref",
+    "issuanceDate": "@json.toDate(model.issuance_date)",
+    "expirationDate": "@json.toDate(model.expiration_date)",
+    "credentialSubject" : @model.credentialSubject
+}
+  
