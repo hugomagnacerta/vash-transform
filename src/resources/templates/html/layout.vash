@@ -1,9 +1,0 @@
-@html.include('./resources/templates/html/header.vash', model)
-<ul>
-    @html.block('main-nav', function(model){
-	    <li><a href="/">Home</a></li>
-    })
-
-    <li>@html.test(model.description)</li>
-</ul>
-@html.include('./resources/templates/html/footer.vash', model)
